@@ -1,0 +1,113 @@
+
+@-ms-viewport{
+  width: device-width;
+}
+
+.corner { grid-column-start: six;grid-column-end: seven;grid-row-start: A;grid-row-end: B; }
+.item1 { grid-column-start: five;grid-column-end: six;grid-row-start: A;grid-row-end: B; }
+.item2 { grid-column-start: one;grid-column-end: two;grid-row-start: B;grid-row-end: C;}
+.item3 { grid-column-start: two;grid-column-end: three;grid-row-start: C;grid-row-end: D;}
+.item4 { grid-column-start: two; grid-column-end: three;grid-row-start: D;grid-row-end: E;}
+.item5 { grid-column-start: two; grid-column-end: three;grid-row-start: E;grid-row-end: F;}
+.item6 { grid-column-start: two; grid-column-end: three; grid-row-start: F; grid-row-end: G;}
+.item2b { grid-column-start: two;grid-column-end: five;grid-row-start: B;grid-row-end: C;}
+.item3b { grid-column-start: three;grid-column-end: four;grid-row-start: C;grid-row-end: D;}
+.item4b { grid-column-start: three; grid-column-end: four;grid-row-start: D;grid-row-end: E;}
+.item5b { grid-column-start: three; grid-column-end: four;grid-row-start: E;grid-row-end: F;}
+.item6b { grid-column-start: three; grid-column-end: four; grid-row-start: F; grid-row-end: G;}
+.item3c { grid-column-start: four;grid-column-end: five;grid-row-start: C;grid-row-end: D;}
+.item4c { grid-column-start: four; grid-column-end: five;grid-row-start: D;grid-row-end: E;}
+.item5c { grid-column-start: four; grid-column-end: five;grid-row-start: E;grid-row-end: F;}
+.item6c { grid-column-start: four; grid-column-end: five; grid-row-start: F; grid-row-end: G;}
+.item7 { grid-column-start: one; grid-column-end: seven; grid-row-start: G; grid-row-end: H;}
+.item8 { grid-column-start: one; grid-column-end: seven; grid-row-start: H; grid-row-end: I;}
+
+.itemgallery { grid-column-start: three; grid-column-end: seven; grid-row-start: B; grid-row-end: I;}
+.grid-container {
+  width:auto-fit;
+  height:100%;
+  display: grid;
+  grid-template-columns: [one] 2fr [two] 4fr [three] 4fr [four] 4fr [five] 1fr [six] 1fr [seven];
+  grid-template-rows: [A] .3fr [B] 2fr [C] 1fr [D] 3fr [E] 3fr [F] 3fr [G] 3fr [H] 1fr [I];
+  grid-gap: 10px;
+  background: linear-gradient(50deg, antiquewhite 20%, transparent 78%) 3px 0, linear-gradient(50deg, linen 10%, transparent 78%) 3px 0,linear-gradient(90deg, darkgray 0%, transparent 23%) 3px 0, linear-gradient(1deg, transparent 44%, cornsilk 100%), cornsilk;background-size: 100% 4360px;
+  padding: 10px;
+}
+.right { justify-self: right; }
+.left { justify-self: left; }
+.center { text-align: center;}
+.bottom { align-self: flex-end; }
+.stretch { align-self: stretch; }
+
+.grid-container > div {
+
+                 font-size: 20px;
+                 border-radius: 25px;
+
+}
+img {
+    max-width: 99%;
+    height: 50px;
+}
+
+.header_textbox
+                  { 
+                  margin: 5px 5px 5px 5px;
+                  padding: 40px 10px 40px 10px;
+                  align-self: center; 
+                  background-color: midnightblue;
+                  font-family: 'Bree Serif';
+                  color: white;
+                  opacity: 0.5;
+                  text-decoration: none;
+                  border-color: red;
+                  border-radius: 15px;}
+.textbox
+                  { 
+                  margin: 5px 5px 5px 5px;
+                  padding: 40px 10px 40px 10px;
+                  align-self: center; 
+                  background-color: midnightblue;
+                  font-family: 'Bree Serif';
+                  color: white;
+                  opacity: 0.5;
+                  text-decoration: none;
+                  border-color: red;
+                  border-radius: 15px;}
+.justtext
+                  { 
+                  align-self: center; 
+                  font-family: 'Bree Serif';
+                  color: black;
+                  font-size:24px;
+                  border-color: red;}
+
+a                 {text-decoration: none;}
+
+.textbox:hover
+                  {
+                  opacity:.85;
+                  border-radius:50%;
+}
+
+.slider           {
+                 
+
+                  height:400px;
+                  border-radius: 15px;
+                  align-self: center;
+                  opacity:.8;
+                  margin: 5px 5px 5px 5px;
+                  padding: 40px 10px 40px 200px; 
+}
+
+.slider        img{
+                  display:none;
+ 
+}
+
+.slider img.active{
+                  display:inline-block;
+                  height:400px;
+}
+
