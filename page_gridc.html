@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width">
+<link href="https://fonts.googleapis.com/css?family=Bree+Serif|Kaushan+ScriptPermanent+Marker|Righteous|Barlow+Condensed" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href=" {{ url_for('static',filename='sample_style_sheet.css')}}"">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+</script>
+<script>
+$(document).ready(function(){
+      setTimeout(function() {$('welcome').replaceWith('<div>hi</div>')},1000);
+});
+</script>
+<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+
+</head>
+<body>
+
+
+
+<div class="grid-container">
+     
+   
+    <div class="item1">
+        <img src="C:/Users/dawig/Desktop/resume/logo2.png">
+        </img>
+    </div>
+   
+    <div class="corner" style="font-size:16px;">
+        <a href="C:/Users/dawig/Desktop/resume/welcome.html">
+           <div class="header_textbox">
+           Dan Wigodsky<br>CUNY SPS<br>Senior Research Project<br>MS in Data Science
+           </div>
+        </a>
+       
+    </div>
+ 
+ <div class="item1 center">
+        <a>
+            <div class="justtext" >
+             models<br><br><br><br><br>
+            </div>
+        </a>
+</div>
+
+    <div class="item1b center">
+        <a href="/data_story">
+             <div class="textbox">
+               data story
+             </div>
+        </a>
+    </div>
+
+    <div class="item1c center">
+        <a href="/visualizations">
+          <div class="textbox">visualizations
+          </div>
+        </a>
+    </div>
+
+    <div class="item2 center">
+        
+  
+            <div class="contentbox">
+                 <div class="content_top">
+                      <img src="https://raw.githubusercontent.com/WigodskyD/Data698_images/master/linreg_one_var.png" style="height:450px; width:800px;">
+                      </img>
+                 </div>
+                 <div class="content_bottom">
+                      <a style="padding:35px 20px 0px 0px;">
+                     To begin exploration of our models, we look at how each of the explanatory variables, on its own, contributes to variation in the level of accidents in Montgomery County.  Each variable has a statistically significant association with the target accident kernel.  A multiple regression with all 23 variables achieved an R-squared value of .8679.  
+                      </a>
+                 </div>
+            </div>
+                                                              <div class="interstitial" >
+                                                              </div>
+
+
+          <div class="contentbox">
+                 <div class="content_top">
+                      <img src="https://raw.githubusercontent.com/WigodskyD/Data698_images/master/corr_plot.png" style="height:450px; width:700px;">
+                      </img>
+                 </div>
+                 <div class="content_bottom">
+                      <a style="padding:35px 20px 0px 0px;">
+                     While our variables create significant associations with the accident kernel, there are many high correlations among them.  The resulting multicollinearity results from each variable's association with population.  In a multiple regression, variance inflation factor, a measure that is excessive above 10, was as high as 76.3 for one variable.  10 variables were above 10.
+                      </a>
+                 </div>
+            </div>
+
+                                                              <div class="interstitial" >
+                                                              </div>
+
+
+
+          <div class="contentbox">
+                 <div class="content_top">
+                      <img src="https://raw.githubusercontent.com/WigodskyD/Data698_images/master/model_diagnostics.png" style="height:380px; width:800px;">
+                      </img>
+                 </div>
+                 <div class="content_bottom">
+                      <a style="padding:35px 20px 0px 0px;">
+                     Due to multicollinearity, a model was fit with variables transformed in an attempt to filter the common factor.  It resulted in incredibly high prediction error.  Other regression models were also fit to control for difficulties with residual correlation and collinearity.  A model with only low-vif variables achieved a root mean squared error with the validation set of 19.5, compared with the mean 25.4 for the accident kernel.
+                      </a>
+                 </div>
+            </div>
+
+
+                                                              <div class="interstitial" >
+                                                              </div>
+
+
+          <div class="contentbox">
+                 <div class="content_top">
+                      <img src="https://raw.githubusercontent.com/WigodskyD/Data698_images/master/xgboost_a.png" style="height:450px; width:800px;">
+                      </img>
+                 </div>
+                 <div class="content_bottom">
+                      <a style="padding:35px 20px 0px 0px;">
+                     After tuning, two other machine learning models achieved better results than our regression-based models.  The first to tune was an XGBoost model. 
+                      </a>
+                 </div>
+            </div>
+
+                                                              <div class="interstitial" >
+                                                              </div>
+
+          <div class="contentbox">
+                 <div class="content_top">
+                      <img src="https://raw.githubusercontent.com/WigodskyD/Data698_images/master/xgboost_b.png" style="height:450px; width:800px;">
+                      </img>
+                 </div>
+                 <div class="content_bottom">
+                      <a style="padding:35px 20px 0px 0px;">
+                     The XGBoost model achieved its best results at a maximum tree depth of 4 and a learning rate, eta of .163. 
+                      </a>
+                 </div>
+            </div>
+
+                                                              <div class="interstitial" >
+                                                              </div>
+
+          <div class="contentbox">
+                 <div class="content_top">
+                      <img src="https://raw.githubusercontent.com/WigodskyD/Data698_images/master/xgboost_c.png" style="height:450px; width:800px;">
+                      </img>
+                 </div>
+                 <div class="content_bottom">
+                      <a style="padding:35px 20px 0px 0px;">
+                     At 4200 rounds, the best model was achieved.  It boasted a root mean square error of 8.95, and an R-squared of.9644, meaning the model accounts for more than 96 % of the variance in accident levels.  This was the most accurate model created of any type.
+                      </a>
+                 </div>
+            </div>
+
+                                                              <div class="interstitial" >
+                                                              </div>
+          <div class="contentbox">
+                 <div class="content_top">
+                      <img src="https://raw.githubusercontent.com/WigodskyD/Data698_images/master/nnet_plot_1.png" style="height:450px; width:800px;">
+                      </img>
+                 </div>
+                 <div class="content_bottom">
+                      <a style="padding:35px 20px 0px 0px;">
+                     A neural net model was more difficult to tune, and a regression on parameters was needed to augment visual comparison.
+                      </a>
+                 </div>
+            </div>
+
+                                                              <div class="interstitial" >
+                                                              </div>
+          <div class="contentbox">
+                 <div class="content_top">
+                      <img src="https://raw.githubusercontent.com/WigodskyD/Data698_images/master/nnet_plot_3_over_5000_iter_rmse_under_14.png" style="height:450px; width:800px;">
+                      </img>
+                 </div>
+                 <div class="content_bottom">
+                      <a style="padding:35px 20px 0px 0px;">
+                     For the neural net, larger hidden layers improved performance.  The best neural net had a root mean square error of 10.06.  This performed better than the regression-based models.
+                      </a>
+                 </div>
+            </div>
+
+                                                              <div class="interstitial" >
+                                                              </div>
+          <div class="contentbox">
+                 <div class="content_top">
+                      <img src="https://raw.githubusercontent.com/WigodskyD/Data698_images/master/nnet_plotmo_3d.png" style="height:450px; width:800px;">
+                      </img>
+                 </div>
+                 <div class="content_bottom">
+                      <a style="padding:35px 20px 0px 0px;">
+                     A comparison between the effect of speeding violation locations and registration violation locations shows a complex relationship that non-linear models captured better.  In one dimension, speeding didn't appear to have much effect.  In two dimensions, we can see that at higher values, the effect of speeding becomes complex. (Plotmo partial dependence plot)
+                      </a>
+                 </div>
+            </div>
+
+                                                              <div class="interstitial" >
+                                                              </div>
+          <div class="contentbox">
+                 <div class="content_top">
+                      <img src="https://raw.githubusercontent.com/WigodskyD/Data698_images/master/xgBoost_variable_importance.png" style="height:450px; width:630px;">
+                      </img>
+                 </div>
+                 <div class="content_bottom">
+                      <a style="padding:35px 20px 0px 0px;">
+                     Variable importance for the XGBoost model shows that speeding is really important for creating an accurate model for accident locations.  Stopping violations, emergency vehicle violations and pedestrian violations are also more important than other models.  In this case, pedestrian violations are infractions by pedestrians.  The other set is designated "driver care for pedestrians".
+                      </a>
+                 </div>
+            </div>
+
+                                                              <div class="interstitial" >
+                                                              </div>
+
+         <div class="contentbox">
+                 <div class="content_top">
+                      <img src="https://raw.githubusercontent.com/WigodskyD/Data698_images/master/nnet_variables_plotmo.png" style="height:450px; width:800px;">
+                      </img>
+                 </div>
+                 <div class="content_bottom">
+                      <a style="padding:-15px 20px 0px 0px;">
+                     A Plotmo plot for partial dependence shows interactions for each variable.  The effect of background variables is averaged.  The variable order is: speeding, registration, traffic light, aggressive driving, alcohol, cellphone, driver care for pedestrians, emergency, equipment, following closely, lane use, misc., parking, pedestrian, right of way, right side, leaving scene, school bus, seatbelt, slow, stopping, turning and wrong way.
+                      </a>
+                 </div>
+            </div>
+
+                                                              <div class="interstitial" >
+                                                              </div>
+
+
+        </div>
+       
+
+
+
+   <div class="itemside">
+        <a>
+          <div class="blankbox">
+
+          </div>
+        </a>
+    </div>
+
+</div>
+
+
+
+
+</body>
+</html>
+
+
+
+<!--        Extra items are down here in case they become useful.
+ <div class="item1" style="background: linear-gradient(60deg, whitesmoke 23%, transparent 43%) 3px 0, linear-gradient(3deg, transparent 19%, ivory 78%), linen;background-size: 8px 5px;"><h2 style="color:dimgray;margin-top:0px;">New York Movie Tour</h2>
+    </div>
+
+
+<img src="https://raw.githubusercontent.com/WigodskyD/data-sets/master/graph6.png" >
+        </img>
+
+-->
